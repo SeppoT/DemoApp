@@ -19,6 +19,6 @@ describe('AppFacade', () => {
     const appStateSpy = jasmine.createSpyObj('AppStateService', ['getViewItems','getViewItems$','updateViewItem','setViewItems']);
 
     appFacade = new AppFacade(appStateSpy,backendApiSpy);
-    //expect(new AppFacade()).toBeTruthy();
+    expect(appFacade).toBeTruthy();
   });
 });

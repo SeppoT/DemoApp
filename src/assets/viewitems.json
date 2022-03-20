@@ -1,0 +1,42 @@
+[
+    {
+        "id":"1",
+        "title":"testitem 1",
+        "width":"250",
+        "height":"250",
+        "x":"100",
+        "y":"100",
+        "bgcolor":"#FFFFFF",
+        "textcolor":"#000000"
+    },
+    {
+        "id":"2",
+        "title":"testitem 2",
+        "width":"250",
+        "height":"250",
+        "x":"300",
+        "y":"300",
+        "bgcolor":"#FFFFFF",
+        "textcolor":"#000000"
+    },
+    {
+        "id":"3",
+        "title":"testitem 3",
+        "width":"250",
+        "height":"250",
+        "x":"400",
+        "y":"400",
+        "bgcolor":"#FFFFFF",
+        "textcolor":"#000000"
+    },
+    {
+        "id":"4",
+        "title":"testitem 4",
+        "width":"250",
+        "height":"250",
+        "x":"50",
+        "y":"400",
+        "bgcolor":"#FFFFFF",
+        "textcolor":"#000000"
+    }
+]

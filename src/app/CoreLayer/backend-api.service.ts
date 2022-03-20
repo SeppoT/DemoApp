@@ -11,7 +11,7 @@ import { ViewItem } from '../Models/view-item';
 export class BackendApiService {
 
   /** angular.json assets: { "glob": "viewitems.json", "input": "./", "output": "./assets/" } */
-  readonly API = '/assets/viewitems.json';
+  readonly API = './assets/viewitems.json';
 
   constructor(private http: HttpClient) { }
 

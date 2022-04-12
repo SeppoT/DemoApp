@@ -1,1 +1,6 @@
-<p>{{itemData|json}}</p>
+
+<div class="itemTitle">{{itemData.title}}</div>
+
+<div class="details mousedowndetails" *ngIf="mouseDownDetailsVisible">{{itemData.title}}</div>
+
+<div class="details" *ngIf="dragDetailsVisible">DRAG</div>

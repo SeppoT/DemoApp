@@ -1,21 +1,21 @@
-import { TestBed } from '@angular/core/testing';
-import { HttpClient } from '@angular/common/http';
+import { TestBed } from "@angular/core/testing";
+import { HttpClient } from "@angular/common/http";
 
-import { BackendApiService } from './backend-api.service';
+import { BackendApiService } from "./backend-api.service";
 
-describe('BackendApiService', () => {
-  let service: BackendApiService;
+describe("BackendApiService", () => {
+    let service: BackendApiService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers :[
-        { provide: HttpClient, useValue: jasmine.createSpyObj('HttpClient',['get'])}
-      ]
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            providers :[
+                { provide: HttpClient, useValue: jasmine.createSpyObj("HttpClient",["get"])}
+            ]
+        });
+        service = TestBed.inject(BackendApiService);
     });
-    service = TestBed.inject(BackendApiService);
-  });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+    it("should be created", () => {
+        expect(service).toBeTruthy();
+    });
 });

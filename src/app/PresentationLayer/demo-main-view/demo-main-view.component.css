@@ -1,0 +1,32 @@
+
+.allitems
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly
+    
+}
+
+.viewItemContainer
+{    
+    position: relative;
+    min-width: 950px;
+    height: 700px;
+    outline: dotted #000 2px;
+}
+
+.sideBar
+{
+    position: relative;
+    width: 300px;
+    height: 700px;
+    overflow: auto;
+    font-size: 12px;
+    outline: dotted #000 2px;
+}
+
+table {
+    width: 100%;
+  }
+

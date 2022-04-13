@@ -25,6 +25,20 @@
  
 .itemTitle
 {
+    position: absolute;
+    pointer-events: none;
+    top: 30px;
+    margin: auto;
+}
+
+.icon
+{
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: 5px;
+    left: 10px;
+    background-color: #ffffff;
     pointer-events: none;
 }
 

@@ -20,7 +20,9 @@ export class ViewItemBoxComponent {
   @Input() boundaryY!:number;
 
   @Output() itemChangeEvent:EventEmitter<ViewItem> = new EventEmitter<ViewItem>();
-
+  @Output() itemDraggedEvent:EventEmitter<ViewItem> = new EventEmitter<ViewItem>();
+  @Output() itemSelectedEvent:EventEmitter<ViewItem> = new EventEmitter<ViewItem>();
+ 
   @HostBinding("style.backgroundColor") get bgcolor() {
     if(this.mouseOverDetailsVisible){ return "#9ccf65"; }
       else { return this.itemData.bgcolor??"#FFFFFF";}
@@ -53,10 +55,16 @@ export class ViewItemBoxComponent {
   }
 
   @HostListener("cdkDragStarted",["$event"])
-  componentDragged($event:CdkDragStart) {
+  componentDragStart($event:CdkDragStart) {
     this.zIndex=100;
     this.dragDetailsVisible=true;
     this.mouseDownDetailsVisible=false;
+    
+  }
+
+  @HostListener("cdkDragMoved",["$event"])
+  componentDragged($event:any) {
+    this.itemDraggedEvent.emit($event);
   }
 
   @HostListener("mousedown",["$event"])
@@ -64,6 +72,7 @@ export class ViewItemBoxComponent {
   {
     this.zIndex=100;
     this.mouseDownDetailsVisible=true;
+    this.itemSelectedEvent.emit(this.itemData);
   }
 
   @HostListener("mouseup",["$event"])

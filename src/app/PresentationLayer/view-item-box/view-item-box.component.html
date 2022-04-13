@@ -1,6 +1,9 @@
 
 <div class="itemTitle">{{itemData.title}}</div>
 
+<img class="icon" [src]="itemData.icon">
+
 <div class="details mousedowndetails" *ngIf="mouseDownDetailsVisible">{{itemData.title}}</div>
 
-<div class="details" *ngIf="dragDetailsVisible">DRAG</div>
+<div class="details" *ngIf="dragDetailsVisible"></div>
+

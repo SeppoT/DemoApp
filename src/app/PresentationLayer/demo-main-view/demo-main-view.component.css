@@ -16,6 +16,44 @@
     outline: dotted #000 2px;
 }
 
+.viewItemContainerBg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FCE2BF;
+}
+
+.viewItemContainerBgImage
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.viewItemCanvas
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.viewItemContainerBgHorizontalLine
+{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #CDB593;
+}
+
+.viewItemContainerBgVerticalLine
+{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #CDB593;
+}
+
 .sideBar
 {
     position: relative;

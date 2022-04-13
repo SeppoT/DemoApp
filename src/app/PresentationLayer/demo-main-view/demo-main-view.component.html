@@ -32,11 +32,23 @@
     </div>
 
     <div class="viewItemContainer" #dragcontainer>
+        <div class="viewItemContainerBg">
+
+            <img class="viewItemContainerBgImage" src="assets/oulu.png">
+            <div [style.top]="horizontalGuidePosition+'px'" class="viewItemContainerBgHorizontalLine"></div>
+            <div [style.left]="verticalGuidePosition+'px'" class="viewItemContainerBgVerticalLine"></div>
+
+            <div *ngFor="let gridline of horizontalGrid" [style.top]="gridline+'px'" class="viewItemContainerBgHorizontalLine"></div> 
+            <div *ngFor="let gridline of verticalGrid" [style.left]="gridline+'px'" class="viewItemContainerBgVerticalLine"></div>     
+            
+            <canvas #viewCanvas class="viewItemCanvas"></canvas>
+        </div>    
+
         <app-view-item-box cdkDrag
             *ngFor="let viewitem of (appDataFacade.getViewItems$() | async)" 
-            (itemChangeEvent)="itemChanged(viewitem)"
+            (itemChangeEvent)="itemChanged(viewitem)" (itemDraggedEvent)="itemDragged($event)" (itemSelectedEvent)="itemSelected(viewitem)"
             [cdkDragFreeDragPosition]="{x:viewitem.x*1,y:viewitem.y*1}" [cdkDragBoundary]="dragcontainer"
-            [itemData]="viewitem" [boundaryX]="950" [boundaryY]="700">
+            [itemData]="viewitem" [boundaryX]="viewAreaWidth" [boundaryY]="viewAreaHeight">
         </app-view-item-box>
     </div>
     

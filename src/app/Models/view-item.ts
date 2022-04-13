@@ -7,4 +7,11 @@ export interface ViewItem {
     y:number;
     bgcolor?:string;
     textcolor?:string;
+    icon?:string;
+}
+
+export interface Point 
+{
+    x:number;
+    y:number;
 }
